@@ -1,10 +1,13 @@
 #!/usr/bin/python
 # https://developers.google.com/drive/quickstart-python
-#
 # As Claudio (GOOGLE Developer) mentioned in http://youtu.be/zJVCKvXtHtE?t=12m18s,
 # we need to use some logic (client library) to sort your crendentials for reusing.
 # Other wise on every execution of 'quickstart.py', you need human interaction for getting credentials
 #
+# I added 6 lines to google's 'quickstart.py' to keep authorization code for future use.
+# So as long as the user has not revoked the access granted initially to the application, 
+# this script don't need a human interaction. (https://developers.google.com/accounts/docs/OAuth2InstalledApp#refresh)
+# Added lines : # 19,36,39,41,51,53
 # Suku John George
 
 import httplib2
